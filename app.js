@@ -88,18 +88,18 @@ menuModalList.innerHTML = season.map(function(s){
 }).join("");
 
 card[0].addEventListener("click", function openModal(){
-    cardModals.innerHTML = "<div class='cardModalWrap'>"
-                    + "<div class='cardModalBox'>"
-                        + "<div class='cardModal'>"
-                            + "<img alt='modalImg' class='modalImg' src=" + (cardList[0].img) + "></img>"
-                            + "<div class='modalTextBox'>"
-                                + "<div class='modalTitle'>" + (cardList[0].title) +"</div>"
-                                + "<div class='modalContents'>" + (cardList[0].content) + "</div>"
-                            + "</div>"
-                            + "<button class='closeModal'><i class='fa-solid fa-x'></i></button>"
-                        + "</div>"
-                    + "</div>"
-                + "</div>";
+    cardModals.innerHTML = `<div class='cardModalWrap'>
+                <div class='cardModalBox'>
+                    <div class='cardModal'>
+                        <img alt='modalImg' class='modalImg' src=${cardList[0].img}></img>
+                        <div class='modalTextBox'>
+                            <div class='modalTitle'>${cardList[0].title}</div>
+                            <div class='modalContents'>${cardList[0].content}</div>
+                        </div>
+                        <button class='closeModal'><i class='fa-solid fa-x'></i></button>
+                    </div>
+                </div>
+            </div>`;
         
     const cardModalBox = document.querySelector(".cardModalBox");
     const cardModalWrap = document.querySelector(".cardModalWrap");
